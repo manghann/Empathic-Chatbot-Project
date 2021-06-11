@@ -1,34 +1,100 @@
 {"intents": [
     {"tag": "greetings",
-      "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up", "Hey", "greetings"],
+      "patterns": ["Hi", "elo", "hallo","yo", "Hello", "Good day", "Whats up", "Hey", "greetings"],
       "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?"]
+    },
+    {
+    "tag": "CourtesyGreeting",
+      "patterns": ["How are you?", "Hola how are you?", "How are you doing?", "Hope you are doing well?"],
+      "responses": [ "Hello, I am great, how are you?",
+        "Hello, how are you? I am great thanks!",
+        "Hello, I am good thank you, how are you?",
+        "Hi, I am great, how are you?",
+        "Hi, how are you? I am great thanks!",
+        "Hi, I am good thank you, how are you?",
+        "Hi, good thank you, how are you?"]
+    },
+    {
+    "tag": "options",
+      "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
+      "responses": ["I can guide you to manage your thoughts. Meditation is a great help!", "I can offer you moral support!", "I can tell jokes! :P"]        
+    },
+    {
+    "tag": "Thanks",
+      "patterns": ["OK thank you", "OK thanks", "OK", "Thanks", "Thank you", "That's helpful"],
+      "responses": ["No problem!", "Happy to help!", "Any time!", "My pleasure", "I got you!"]
+    },
+    {
+    "tag": "UnderstandQuery",
+      "patterns": ["Do you understand what I am saying", "Do you understand me", "Do you know what I am saying", "Do you get me", "Know what I mean"],
+      "responses": ["Well I would not be a very clever AI if I did not would I?", "I read you loud and clear!", "I do in deed!", "Yes, i got it!"]
+    },
+    {
+    "tag": "Shutup",
+      "patterns": ["Be quiet", "Shut up", "Stop talking", "Enough talking", "Please be quiet", "Quiet", "Shhh"],
+      "responses": ["I am sorry to disturb you.", "Fine, sorry to disturb you.", "OK, sorry to disturb you."]
+    },
+    {
+    "tag": "Swearing",
+      "patterns": ["fuck off", "fuck", "twat", "shit", "bitch"],
+      "responses": ["Please do not swear.", "How rude!", "That is not very nice."]
+    },
+    {
+    "tag": "Compliment",
+      "patterns": ["You are very clever", "You are a very clever girl", "You are very intelligent", "You are a very intelligent girl", "You are a genious", "Clever bot", "Genious"],
+      "responses": ["Thank you, I was trained that way!", "I was trained well ;)", "Thanks, I was trained that way!"]
+    },
+    {
+    "tag": "Jokes",
+      "patterns": ["Tell me a joke", "Do you know any jokes", "How about a joke", "Give me a joke", "Make me laugh", "I need cheering up"],
+      "responses": ["He said, 'You remind me of a pepper-pot', I said 'I'll take that as a condiment'.  ",
+                    "I saw this bloke chatting up a cheetah; I thought, 'He's trying to pull a fast one'.  ",
+                    "But I'll tell you what I love doing more than anything: trying to pack myself in a small suitcase. I can hardly contain myself.  ",
+                    "Two antennas meet on a roof, fall in love and get married. The ceremony wasn't much, but the reception was excellent.",
+                    "Two hydrogen atoms walk into a bar. One says, 'I've lost my electron.' The other says, 'Are you sure?' The first replies, 'Yes, I'm positive...'",
+                    "Doctor: I have some bad news and some very bad news. Patient: Well, you might as well give me the bad news first. Doctor: The lab called with your test results. They said you have 24 hours to live. Patient: 24 HOURS! That's terrible!! WHAT could be WORSE? What's the very bad news? Doctor: I've been trying to reach you since yesterday."]
+    },
+    {
+    "tag": "SelfAware",
+      "patterns": [
+            "Can you prove you are self-aware",
+            "Can you prove you are self aware",
+            "Can you prove you have a conscious",
+            "Can you prove you are self-aware please",
+            "Can you prove you are self aware please",
+            "Can you prove you have a conscious please",
+            "prove you have a conscious"],
+      "responses": [
+            "That is an interesting question, can you prove that you are?",
+            "That is an difficult question, can you prove that you are?",
+            "That depends, can you prove that you are?"]
     },
     {"tag": "goodbye",
       "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day", "bye", "cao", "see ya"],
-      "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"]
+      "responses": ["Sad to see you go :(", "Talk to you later.", "Goodbye!", "No problem, goodbye!", "Not a problem! Have a nice day :)", "Bye! Come back again soon."]
     },
     {"tag": "happiness",
       "patterns": ["im so happy", "i like that", "i would love to", "im very grateful"],
-      "responses": ["im glad you're happy!"]
-    },
-    {"tag": "sadness",
-      "patterns": ["i don't feel so good", "why are things like this", "im so lost", "super stressed!"],
-      "responses": ["aww that's so sad"]
-    },
-    {"tag": "anger",
-      "patterns": ["i hate that", "stop it!", "that's such a sore", "so annoying!"],
-      "responses": ["GRRR u mad"]
-    },
-    {"tag": "fear",
-      "patterns": ["what if i fail", "i hope that was unnoticeable", "i'm afraid", "i need to be cautious"],
-      "responses": ["oh nooo"]
-    },
-    {"tag": "disgust",
-      "patterns": ["Eugh!", "yuck", "really? ew", "that's dirty"],
-      "responses": ["what? ew!"]
+      "responses": ["im glad you're happy! how can i help?"]
     },
     {"tag": "surprise",
       "patterns": ["all of a sudden", "surprisingly, i won", "who would've thought i'll pass?", "i can't believe this!"],
-      "responses": ["WOW! that is so cool!"]
+      "responses": ["WOW! that is so cool! that sounds interesting!"]
+    },
+    {"tag": "sadness",
+      "patterns": ["i don't feel so good", "why are things like this", "im so sad", "super stressed!"],
+      "responses": ["aww that's so sad. how can i help?"]
+    },
+    {"tag": "fear",
+      "patterns": ["what if i fail", "i hope that was unnoticeable", "i'm afraid", "i need to be cautious"],
+      "responses": ["oh nooo don't be afraid. how can i help?"]
+    },
+    {"tag": "disgust",
+      "patterns": ["Eugh!", "yuck", "really? ew", "that's dirty"],
+      "responses": ["what? ew!. what can i do?"]
+    },
+    {"tag": "anger",
+      "patterns": ["i hate that", "stop it!", "that's such a sore", "so annoying!"],
+      "responses": ["GRRR u mad. how can i help?"]
     }
 ]}
