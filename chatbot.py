@@ -6,9 +6,9 @@ import numpy as np
 import nltk
 #nltk.download('wordnet')
 from nltk.stem import WordNetLemmatizer
-
 from tensorflow.keras.models import load_model
 
+from textblob import TextBlob
 
 lemmatizer = WordNetLemmatizer()
 intents = json.loads(open('intents.json').read())
@@ -56,10 +56,24 @@ def get_response(intents_list, intents_json):
             break
     return result
 
-print('Chatbot is READY!')  
+print('Chatbot is READY! 😎')  
 
 while True:
-    message = input("")
+    message = input("You: ")
+    
+    # Sentiment Analysis [Negative <0 | Neutral =0 | Positive >=1]
+    edu = TextBlob(message) 
+    polarity = edu.sentiment.polarity 
+
+    if polarity < 0:
+        sentiment = 'Negative 😟'
+    elif polarity == 0:
+        sentiment = 'Neutral 😐'
+    elif polarity >= 1:
+        sentiment = 'Positive 😄'       
+
+    print("Your message is ", sentiment)
+
     ints = predict_class(message)
     res = get_response(ints, intents)
-    print(res)
+    print("BOT: ", res)    
